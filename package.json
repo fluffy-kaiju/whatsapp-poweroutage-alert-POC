@@ -1,0 +1,25 @@
+{
+  "name": "whatsapp-poweroutage-alert-poc",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/fluffy-kaiju/whatsapp-poweroutage-alert-POC#readme",
+  "bugs": {
+    "url": "https://github.com/fluffy-kaiju/whatsapp-poweroutage-alert-POC/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluffy-kaiju/whatsapp-poweroutage-alert-POC.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "baileys": "^7.0.0-rc.9",
+    "express": "^5.2.1",
+    "qrcode": "^1.5.4"
+  }
+}

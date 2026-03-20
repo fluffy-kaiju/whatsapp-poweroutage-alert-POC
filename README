@@ -1,0 +1,57 @@
+# WhatsApp Group Message API
+
+POC in relation with this discussion https://www.reddit.com/r/esp32/comments/1ry3bw8/power_outage_project/
+
+This application connects to your WhatsApp account using the Baileys library and exposes a local HTTP API. You can use this API to send messages programmatically to a specific WhatsApp group of your choosing.
+
+## Prerequisites
+
+- Node.js installed on your machine.
+- WhatsApp installed on your mobile device.
+
+## Getting Started
+
+Follow these steps to set up and run the application:
+
+### 1. Install Dependencies
+
+Install the required Node.js packages by running:
+
+```bash
+npm install
+```
+
+### 2. Run the Application
+
+Start the script using Node:
+
+```bash
+node main.js
+```
+
+### 3. Scan the QR Code
+
+When the script starts, it will generate and display a large QR code in your terminal.
+1. Open WhatsApp on your phone.
+2. Go to **Settings** > **Linked Devices**.
+3. Tap **Link a Device** and scan the QR code on your screen.
+
+### 4. Select a Group
+
+Once successfully connected, the application will fetch all the groups you are currently a part of and display them in the terminal as a numbered list.
+- Type the number of the group you want the bot to send messages to.
+- Press **Enter**.
+
+### 5. Send a Message via HTTP Request
+
+After selecting a group, the internal Express server is fully ready. You can now send POST requests to `http://localhost:3000/send-message` to forward messages to that WhatsApp group.
+
+**Example `curl` Request:**
+
+```bash
+curl -X POST http://localhost:3000/send-message \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello from the HTTP API!"}'
+```
+
+If successful, the bot will instantly drop the message into your selected WhatsApp group!

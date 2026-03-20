@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
-auth_info_baileys/**
+DO_NOT_SHARE_auth_info_baileys_DO_NOT_EXPOSE/**
 
 ### Node ###
 # Logs

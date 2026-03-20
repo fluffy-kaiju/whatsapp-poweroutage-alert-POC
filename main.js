@@ -41,7 +41,11 @@ app.listen(PORT, () => {
 // ----------------------------
 
 async function connectToWhatsApp() {
-    const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys')
+    // BE CAREFUL, THIS FOLDER CONTAINS YOUR WHATSAPP SECRETS. IF THE CONTENT OF THIS FOLDER IS EXPOSED, YOUR WHATSAPP ACCOUNT IS COMPROMISED.
+    // BE CAREFULL, THIS FOLDER CONTAIN YOUR WHATSAPP SECRET. IF THE CONTENT OF THIS FOLDER IS EXPOSE YOUR WHATSAPP ACCOUNT IS COMPROMISE
+    const { state, saveCreds } = await useMultiFileAuthState('DO_NOT_SHARE_auth_info_baileys_DO_NOT_EXPOSE')
+    // BE CAREFUL, THIS FOLDER CONTAINS YOUR WHATSAPP SECRETS. IF THE CONTENT OF THIS FOLDER IS EXPOSED, YOUR WHATSAPP ACCOUNT IS COMPROMISED.
+    // BE CAREFULL, THIS FOLDER CONTAIN YOUR WHATSAPP SECRET. IF THE CONTENT OF THIS FOLDER IS EXPOSE YOUR WHATSAPP ACCOUNT IS COMPROMISE
 
     const { version, isLatest } = await fetchLatestBaileysVersion()
     console.log(`Using WA v${version.join('.')}, isLatest: ${isLatest}`)

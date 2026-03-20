@@ -2,6 +2,8 @@
 
 POC in relation with this discussion https://www.reddit.com/r/esp32/comments/1ry3bw8/power_outage_project/
 
+**Careful: this app is a proof of concept, heavily coded with an LLM in a short time (about 20 minutes). If you expose this service to the web, make sure you fully understand the requirements and risks first.**
+
 This application connects to your WhatsApp account using the Baileys library and exposes a local HTTP API. You can use this API to send messages programmatically to a specific WhatsApp group of your choosing.
 
 ## Prerequisites
